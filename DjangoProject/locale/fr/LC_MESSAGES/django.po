@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-02 23:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\DjangoProject\settings.py:142
+msgid "English"
+msgstr "Anglais"
+
+#: .\DjangoProject\settings.py:143
+msgid "French"
+msgstr "Français"
+
+#: .\templates\base.html:23
+msgid "Home"
+msgstr "Accueil"
+
+#: .\templates\base.html:26
+msgid "Person List"
+msgstr "Liste des Personnes"
+
+#: .\templates\base.html:29
+msgid "Quiz List"
+msgstr "Liste des Quiz"
+
+#: .\templates\base.html:32
+msgid "Login"
+msgstr "Se connecter"
+
+#: .\templates\base.html:35
+msgid "Signup"
+msgstr "S'inscrire"
+
+#: .\templates\base.html:39
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: .\templates\index.html:7 .\templates\quiz\quiz_list.html:6
+msgid "List of Quiz"
+msgstr "List des Quiz"
+
+#: .\templates\index.html:13 .\templates\quiz\quiz_list.html:12
+msgid "DETAIL"
+msgstr "DÉTAIL"
+
+#: .\templates\index.html:14 .\templates\quiz\quiz_list.html:13
+msgid "ANSWER"
+msgstr "REPONDRE"
+
+#: .\templates\index.html:15 .\templates\quiz\quiz_list.html:14
+msgid "EDIT"
+msgstr "MODIFIER"
+
+#: .\templates\index.html:16 .\templates\quiz\quiz_list.html:15
+msgid "DELETE"
+msgstr "SUPPRIMER"
+
+#: .\templates\index.html:23 .\templates\quiz\quiz_list.html:22
+msgid "CREATE"
+msgstr "CRÉER"
+
+#: .\templates\index.html:24 .\templates\quiz\quiz_list.html:23
+#, fuzzy
+#| msgid "TAKE ALL"
+msgid "ANSWER ALL"
+msgstr "RÉPONDRE A TOUS"
+
+#: .\templates\person\person_detail.html:15
+msgid "BACK"
+msgstr "RETOUR"
+
+#: .\templates\person\person_list.html:14
+msgid "VIEW"
+msgstr "REGARDER"
+
+#: .\templates\person\person_update.html:8 .\templates\quiz\quiz_update.html:8
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: .\templates\quiz\quiz_create.html:9
+msgid "Create"
+msgstr "CRÉER"
+
+#: .\templates\quiz\quiz_delete.html:7
+msgid "Are you sure you want to delete"
+msgstr "Etes-vous sur de vouloir supprimer"
+
+#: .\templates\quiz\quiz_delete.html:8
+msgid "Confirm"
+msgstr "Confirmer"
+
+#: .\templates\quiz\quiz_take.html:28 .\templates\quiz\quiz_take_all.html:33
+msgid "Submit"
+msgstr "Soumettre"
+
+#: .\templates\signup.html:5
+#, fuzzy
+#| msgid "Signup"
+msgid "Sign up"
+msgstr "S'inscrire"

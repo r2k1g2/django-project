@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <h1>{% trans 'List of Quiz' %}</h1>
+    <div>
+        {% for object in object_list %}
+            <ul>
+                <li class="m-1 p-2">
+                    <h2>{{ object }}</h2>
+                        <a href="{% url 'quizzy_quiz_detail' object.pk %}"><button class="btn btn-warning">{% trans 'DETAIL' %}</button></a>
+                        <a href="{% url 'quizzy_quiz_take' object.pk %}"><button class="btn btn-info">{% trans 'ANSWER' %}</button></a>
+                        <a href="{% url 'quizzy_quiz_update' object.pk %}"><button class="btn btn-secondary">{% trans 'EDIT' %}</button></a>
+                        <a href="{% url 'quizzy_quiz_delete' object.pk %}"><button class="btn btn-danger">{% trans 'DELETE' %}</button></a>
+                </li>
+            </ul>
+        {% endfor %}
+    </div>
+
+    <div class="mt-5 flex align-self-center align-items-center align-content-center">
+        <a href={% url 'quizzy_quiz_create' %}><button class="btn btn-success">{% trans 'CREATE' %}</button></a>
+        <a href={% url 'quizzy_quiz_take_all' %}><button class="btn btn-primary">{% trans 'ANSWER ALL' %}</button></a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% load static %}
+{% load i18n %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HOME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="{% static '/css/sb-admin-2.css' %}">
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  <link rel="stylesheet" href="{% static '/css/font-awesome.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
+
+</head>
+
+<header>
+    <nav class="ml-5 mt-2 navbar bg-transparent">
+        <button class="btn btn-outline-warning border-0 border-bottom-warning rounded">
+            <a class="pl-2 pr-2 btn-link nav-link text-white" href={% url 'quizzy_index' %}>{% trans 'Home' %}</a>
+        </button>
+        <button class="btn btn-outline-warning border-0 border-bottom-warning rounded">
+            <a class="pl-2 pr-2 btn-link nav-link text-white" href={% url 'quizzy_person_list' %}>{% trans 'Person List' %}</a>
+        </button>
+        <button class="btn btn-outline-warning border-0 border-bottom-warning rounded">
+            <a class="pl-2 pr-2 btn-link nav-link text-white" href={% url 'quizzy_quiz_list' %}>{% trans 'Quiz List' %}</a>
+        </button>
+        <button class="btn btn-success border-0 border-bottom-warning rounded">
+            <a class="pl-2 pr-2 btn-link nav-link text-white" href={% url 'login' %}>{% trans 'Login' %}</a>
+        </button>
+        <button class="btn btn-dark border-0 border-bottom-warning rounded">
+            <a class="pl-2 pr-2 btn-link nav-link text-white" href={% url 'signup' %}>{% trans 'Signup' %}</a>
+        </button>
+            <button class="btn btn-danger border-0 rounded">
+                <a class="pl-2 pr-2 btn-link nav-link text-white" href={% url 'logout' %}>{% trans 'Logout' %} {{ user }}</a>
+            </button>
+    </nav>
+</header>
+
+<body>
+
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <main>
+      <!-- To check if the user is authentificated -->
+      {% if user_is_authentificated %}
+      {% endif %}
+
+      {% block content %}
+
+      {% endblock %}
+  </main>
+
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Your Website</small>
+    </div>
+  </footer>
+
+</body>
+
+</html>

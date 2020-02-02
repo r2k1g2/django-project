@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <head>
+        <title>Taking Quiz</title>
+        <script>
+            let answers = [];
+            {% for question in questions %}
+                 answers.push(
+                     {
+                        name: 'question{{ question.id }}',
+                        value: '{{ question.answer }}'
+                    }
+                );
+            {% endfor %}
+        </script>
+    </head>
+
+    <div id = "container">
+        <section>
+            <div id = "results"></div>
+            <form id="quizForm" name = "quizForm" onsubmit = "submitAnswers(answers)">
+            {% for question in questions %}
+                <h3> {{ question.id }}.  {{ question.question }}</h3>
+                <input type = "radio" name = "question{{ question.id }}" value = "a" id = "question{{ question.id }}">a. {{ question.option1 }}<br><br>
+                <input type = "radio" name = "question{{ question.id }}" value = "b" id = "question{{ question.id }}">b. {{ question.option2 }}<br><br>
+                <input type = "radio" name = "question{{ question.id }}" value = "c" id = "question{{ question.id }}">c. {{ question.option3 }}<br><br>
+                <input type = "radio" name = "question{{ question.id }}" value = "d" id = "question{{ question.id }}">d. {{ question.option4 }}<br><br>
+            {% endfor %}
+                <br>
+                <input type="submit" class="btn btn-secondary" value="{% trans 'Submit' %}">
+            </form>
+            <br>
+        </section>
+    </div>
+{% endblock %}

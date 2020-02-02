@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+
+    {% for object in object_list %}
+        <ul>
+        <h2>{{ object.user }}</h2>
+            {% for tags in object.tags.all %}
+                <li>{{ tags }}</li>
+            {% endfor %}
+            <a href="{% url 'quizzy_person_detail' object.pk %}"><button class="btn btn-warning">{% trans 'VIEW' %}</button></a>
+         </ul>
+    {% endfor %}
+
+{% endblock %}

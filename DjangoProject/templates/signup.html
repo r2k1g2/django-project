@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h2>{% trans 'Sign up' %}</h2>
+    <form class="align-items-center" method="post">
+    {% csrf_token %}
+      {% for field in form %}
+        <p>
+          {{ field.label_tag }}<br>
+          {{ field }}
+          {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+          {% endfor %}
+      {% endfor %}
+        <input type="submit" value="Sign up" class="btn float-center btn-primary">
+    </form>
+{% endblock %}
